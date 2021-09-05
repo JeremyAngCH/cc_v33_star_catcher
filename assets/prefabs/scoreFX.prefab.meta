@@ -1,0 +1,13 @@
+{
+  "ver": "1.1.30",
+  "importer": "prefab",
+  "imported": true,
+  "uuid": "c47a9f4f-d5a5-40cc-9d19-6759f12e73cc",
+  "files": [
+    ".json"
+  ],
+  "subMetas": {},
+  "userData": {
+    "syncNodeName": "scoreFX"
+  }
+}

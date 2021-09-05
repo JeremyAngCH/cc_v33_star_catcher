@@ -1,0 +1,74 @@
+{
+  "ver": "1.0.21",
+  "importer": "image",
+  "imported": true,
+  "uuid": "5dab09ec-e715-4118-aa4c-1edcd503aacf",
+  "files": [
+    ".png",
+    ".json"
+  ],
+  "subMetas": {
+    "6c48a": {
+      "importer": "texture",
+      "uuid": "5dab09ec-e715-4118-aa4c-1edcd503aacf@6c48a",
+      "displayName": "mikado_outline_shadow",
+      "id": "6c48a",
+      "name": "texture",
+      "userData": {
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "wrapModeT": "clamp-to-edge",
+        "wrapModeS": "clamp-to-edge",
+        "mipfilter": "none",
+        "imageUuidOrDatabaseUri": "5dab09ec-e715-4118-aa4c-1edcd503aacf",
+        "anisotropy": 0,
+        "isUuid": true
+      },
+      "ver": "1.0.21",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "f9941": {
+      "importer": "sprite-frame",
+      "uuid": "5dab09ec-e715-4118-aa4c-1edcd503aacf@f9941",
+      "displayName": "mikado_outline_shadow",
+      "id": "f9941",
+      "name": "spriteFrame",
+      "userData": {
+        "trimType": "auto",
+        "trimThreshold": 1,
+        "rotated": false,
+        "offsetX": -4.5,
+        "offsetY": 9,
+        "trimX": 3,
+        "trimY": 3,
+        "width": 497,
+        "height": 232,
+        "rawWidth": 512,
+        "rawHeight": 256,
+        "borderTop": 0,
+        "borderBottom": 0,
+        "borderLeft": 0,
+        "borderRight": 0,
+        "imageUuidOrDatabaseUri": "5dab09ec-e715-4118-aa4c-1edcd503aacf@6c48a",
+        "packable": true,
+        "isUuid": true,
+        "atlasUuid": ""
+      },
+      "ver": "1.0.9",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "type": "sprite-frame",
+    "hasAlpha": true,
+    "redirect": "5dab09ec-e715-4118-aa4c-1edcd503aacf@f9941"
+  }
+}

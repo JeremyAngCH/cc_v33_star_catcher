@@ -1,0 +1,13 @@
+{
+  "__version__": "1.0.1",
+  "general": {
+    "designResolution": {
+      "width": 960,
+      "fitHeight": true,
+      "fitWidth": false
+    }
+  },
+  "script": {
+    "loose": false
+  }
+}

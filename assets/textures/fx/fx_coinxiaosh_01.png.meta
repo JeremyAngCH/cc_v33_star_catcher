@@ -1,0 +1,74 @@
+{
+  "ver": "1.0.21",
+  "importer": "image",
+  "imported": true,
+  "uuid": "95e8f80f-c673-41f0-a95f-b2086073abaa",
+  "files": [
+    ".png",
+    ".json"
+  ],
+  "subMetas": {
+    "6c48a": {
+      "importer": "texture",
+      "uuid": "95e8f80f-c673-41f0-a95f-b2086073abaa@6c48a",
+      "displayName": "fx_coinxiaosh_01",
+      "id": "6c48a",
+      "name": "texture",
+      "userData": {
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "wrapModeT": "clamp-to-edge",
+        "wrapModeS": "clamp-to-edge",
+        "mipfilter": "none",
+        "imageUuidOrDatabaseUri": "95e8f80f-c673-41f0-a95f-b2086073abaa",
+        "anisotropy": 0,
+        "isUuid": true
+      },
+      "ver": "1.0.21",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "f9941": {
+      "importer": "sprite-frame",
+      "uuid": "95e8f80f-c673-41f0-a95f-b2086073abaa@f9941",
+      "displayName": "fx_coinxiaosh_01",
+      "id": "f9941",
+      "name": "spriteFrame",
+      "userData": {
+        "trimType": "auto",
+        "trimThreshold": 1,
+        "rotated": false,
+        "offsetX": 0,
+        "offsetY": 0,
+        "trimX": 4,
+        "trimY": 3,
+        "width": 72,
+        "height": 74,
+        "rawWidth": 80,
+        "rawHeight": 80,
+        "borderTop": 0,
+        "borderBottom": 0,
+        "borderLeft": 0,
+        "borderRight": 0,
+        "imageUuidOrDatabaseUri": "95e8f80f-c673-41f0-a95f-b2086073abaa@6c48a",
+        "packable": true,
+        "isUuid": true,
+        "atlasUuid": ""
+      },
+      "ver": "1.0.9",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "type": "sprite-frame",
+    "hasAlpha": true,
+    "redirect": "95e8f80f-c673-41f0-a95f-b2086073abaa@f9941"
+  }
+}
