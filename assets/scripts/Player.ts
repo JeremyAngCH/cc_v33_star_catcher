@@ -53,7 +53,7 @@ export default class Player extends Component {
     private _myHeight = 0;
 
     private _isTweenJumpReady: boolean = false;
-    private _tweenJump!: Tween<Node>;
+    private _tweenJump: Tween<Node> | null = null;
     private _tweenJumpObj = { scale: new Vec3(Vec3.ONE), position: new Vec3() };
 
     // use this for initialization
@@ -183,15 +183,15 @@ export default class Player extends Component {
         // 初始化跳跃动作
         this._setupJumpAction();
 
-        this._tweenJump.start();
+        this._tweenJump!.start();
     }
 
     stopMove() {
-        this._tweenJump.stop();
+        this._tweenJump?.stop();
     }
 
     // called every frame
-    update(dt: number) {
+    myUpdate(dt: number) {
         // 根据当前加速度方向每帧更新速度
         if (this._accLeft) {
             this._xSpeed -= this.accel * dt;

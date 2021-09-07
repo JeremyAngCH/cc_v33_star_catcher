@@ -1,10 +1,12 @@
-import { _decorator, instantiate, sys, AudioClip, AudioSource, Button, Component, Label, Node, Pool, Prefab, UITransform, Vec3 } from 'cc';
+import { _decorator, instantiate, sys, AudioClip, AudioSource, Button, Component, Label, Node, Pool, Prefab, UITransform, Vec3, director, Canvas, Tween } from 'cc';
 const { ccclass, property } = _decorator;
 
 import Global from "./Global";
 import Player from "./Player";
 import ScoreFX from "./ScoreFX";
 import Star from "./Star";
+
+import SceneTransition from "./SceneTransition";
 
 @ccclass('Game')
 export default class Game extends Component {
@@ -49,6 +51,10 @@ export default class Game extends Component {
     @property(AudioClip)
     private scoreAudio: AudioClip | null = null;
 
+    // 得分音效资源 1
+    @property(AudioClip)
+    private scoreAudio1: AudioClip | null = null;
+
     @property(Button)
     private btnNode: Button | null = null;
 
@@ -83,6 +89,7 @@ export default class Game extends Component {
 
     // use this for initialization
     onLoad() {
+        console.log('Game.canvas.enabled = ' + this.getComponent(Canvas)!.enabled);
         Global.designW = this.getComponent(UITransform)!.width;
         Global.designH = this.getComponent(UITransform)!.height;
 
@@ -171,8 +178,12 @@ export default class Game extends Component {
         // 播放特效
         fx.play();
 
+        let audioClip = this.scoreAudio;
         // 播放得分音效
-        this.audioSource!.playOneShot(this.scoreAudio as AudioClip, 1);
+        if (Math.floor(Math.random() * 2) == 0) {
+            audioClip = this.scoreAudio1;
+        }
+        this.audioSource!.playOneShot(audioClip as AudioClip, 1);
     }
 
     private _resetScore() {
@@ -209,6 +220,8 @@ export default class Game extends Component {
             return;
         }
 
+        this.player!.myUpdate(dt);
+
         // 每帧更新计时器，超过限度还没有生成新的星星
         // 就会调用游戏失败逻辑
         if (this.timer > this.starDuration) {
@@ -218,8 +231,19 @@ export default class Game extends Component {
         this.timer += dt;
     }
 
+    onExitClicked() {
+        this._isPlaying = false;
+        this.player!.stopMove();
+        this.audioSource!.stop();
+
+        director.preloadScene("mainmenu", function () {
+            console.log('Back to Main Menu');
+            SceneTransition.switchSceneFadeInOut('mainmenu');
+        });
+    }
+
     onDestroy() {
-        this._currentStar?.destroy();
+        console.log("Game onDestroy!");
         this._starPool!.destroy();
         this._scorePool!.destroy();
     }
